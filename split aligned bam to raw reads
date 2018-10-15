@@ -1,0 +1,7 @@
+#used to split a aligned bam file into two separat files for paired end reads (R1 and R2)
+
+samtools fastq td.bam -1 td_R1.fq -@12
+
+samtools fast td.bam -2 td_R2.fq -@12
+
+ls
