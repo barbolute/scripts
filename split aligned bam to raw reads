@@ -1,7 +1,6 @@
-#used to split a aligned bam file into two separat files for paired end reads (R1 and R2)
+#used to split a aligned bam file into separate files
+#Outputs paired reads and singletons to separate files. Discardes supplementary and secondary reads. 
+#http://www.htslib.org/doc/samtools.html
 
-samtools fastq td.bam -1 td_R1.fq -@12
 
-samtools fastq td.bam -2 td_R2.fq -@12
-
-ls
+samtools fastq -1 td_R1.fq -2 td_R2.fq -0 /dev/null -s td_single.fq -n -F 0x900 td.bam
