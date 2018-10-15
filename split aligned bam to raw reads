@@ -2,6 +2,6 @@
 
 samtools fastq td.bam -1 td_R1.fq -@12
 
-samtools fast td.bam -2 td_R2.fq -@12
+samtools fastq td.bam -2 td_R2.fq -@12
 
 ls
